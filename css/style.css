@@ -49,3 +49,9 @@ MAIN CONTENT
     margin-top: 10px;
     padding: 10px;
   }
+
+  .hero-image {
+    width: 40vmin;
+    height: auto;
+    margin-bottom: 4vmin;
+  }
