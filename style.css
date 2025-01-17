@@ -55,3 +55,26 @@ MAIN CONTENT
     height: auto;
     margin-bottom: 4vmin;
   }
+
+/* ==========
+CONTACT
+========== */
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+li {
+  margin-right: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+li a:hover {
+  font-weight: bold;
+}
