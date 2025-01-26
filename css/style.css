@@ -30,6 +30,15 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+a:hover {
+  color: grey !important;
+}
+
 /* ==========
 NAVBAR
 ========== */
@@ -72,18 +81,15 @@ li {
   margin-right: 20px;
 }
 
-li a {
-  text-decoration: none;
-  color: #000 !important;
-}
-
-li a:hover {
-  color: grey !important;
-}
-
 /* ==========
 FOOTER
 ========== */
 footer {
   background-color:whitesmoke;
+}
+
+.footer-container {
+  justify-content: left !important;
+  align-items: left !important;
+  text-align: left !important;
 }
