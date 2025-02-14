@@ -47,25 +47,47 @@ NAVBAR
   background-color: #DCDCDC !important;
 }
 
+.navbar-text {
+  font-weight: 800;
+}
+
 /* ==========
 MAIN CONTENT
 ========== */
 
 .container {
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-  }
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
 
-  .hero-image {
-    width: 40vmin;
-    height: auto;
-    padding-top: 1rem;
-  }
+.hero-image {
+  width: 40vmin;
+  height: auto;
+  padding-top: 1rem;
+}
 
-  .about-headder {
-    margin-top: 10px !important;
-  }
+.about-headder {
+  margin-top: 10px !important;
+}
+
+#video-column {
+  margin: auto;
+  padding: 10px 0 10px 0;
+}
+
+iframe {
+  width: 95%;
+  aspect-ratio: 16 / 9;
+}
+
+#facilitating-images {
+  margin-bottom: 20px;
+}
+
+#facilitating-image {
+  padding: 15px 5px 10px 5px;
+}
 
 /* ==========
 CONTACT
@@ -92,4 +114,8 @@ footer {
   justify-content: left !important;
   align-items: left !important;
   text-align: left !important;
+}
+
+#contact-header {
+  margin-top: 20px !important;
 }
