@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Cousine", serif;
+    background-color: aliceblue;
 }
 
 h1 {
@@ -47,7 +48,7 @@ NAVBAR
 ========== */
 
 .navbar {
-  background-color: #DCDCDC !important;
+  background-color: silver;
 }
 
 .navbar-text {
