@@ -48,7 +48,7 @@ NAVBAR
 ========== */
 
 .navbar {
-  background-color: silver;
+  background-color: silver !important;
 }
 
 .navbar-text {
@@ -111,7 +111,7 @@ li {
 FOOTER
 ========== */
 footer {
-  background-color:whitesmoke;
+  background-color: #e6f3ff;
 }
 
 .footer-container {
