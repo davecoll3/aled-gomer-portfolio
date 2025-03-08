@@ -77,14 +77,55 @@ MAIN CONTENT
 
 
 /* ==========
-FACILITATING
+PROJECTS SECTION - VIDEO COLUMNS
 ========== */
 
+/* Make all video-column elements the same height with flexbox */
+.projects-container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .video-column {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
   padding: 10px 0 10px 0;
   text-align: start;
 }
+
+/* Style for h4 elements in the projects section */
+.video-column h4 {
+  margin-bottom: 15px;
+  font-family: 'PT Mono', monospace;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+
+/* Make iframe containers consistent */
+.video-column iframe {
+  width: 95%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 15px;
+}
+
+/* Make the text container grow to fill available space */
+.video-column .text-start,
+.video-column div:not(.aspect-ratio-box) {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: Add a min-height to ensure even heights even with very different content amounts */
+.video-column {
+  min-height: 450px;
+}
+
+/* ==========
+FACILITATING
+========== */
 
 iframe {
   width: 95%;
@@ -235,14 +276,66 @@ IMAGE MODAL
 CONTACT
 ========== */
 
-ul {
+/* Social Links Responsive Styling */
+#social-links {
   display: flex;
-  list-style-type: none;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+  margin: 0 auto; /* Center the entire list */
+  width: 100%;
+  max-width: 400px; /* Limit the width to ensure proper centering */
 }
 
-li {
-  margin-right: 20px;
+#social-links li {
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Ensure text alignment is centered */
+}
+
+/* Add spacing between list items on desktop */
+#social-links li {
+  margin-right: 30px; /* Adjust this value for desired spacing between items */
+}
+
+#social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Center contents of links */
+  padding: 5px 0;
+  white-space: nowrap;
+}
+
+#social-links i {
+  margin-right: 8px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  #social-links {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Allow full width on mobile */
+  }
+  
+  #social-links li {
+    margin: 10px 0 !important; /* Override any margin from desktop */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the li elements */
+  }
+  
+  #social-links li:not(:last-child) {
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+  
+  #social-links a {
+    justify-content: center; /* Center text within links on mobile */
+    width: auto; /* Allow natural width */
+    min-width: 120px; /* Set a minimum width to help with centering */
+  }
 }
 
 /* ==========
@@ -260,4 +353,8 @@ footer {
 
 #contact-header {
   margin-top: 20px !important;
+}
+
+.copyright-footer {
+  background-color: silver !important;
 }
