@@ -18,13 +18,17 @@
     </head>
 
     <!-- body -->
-    <body>
+    <body id="top">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <span class="navbar-text" id="about">
                     Aled Gomer
                 </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
                         <a class="nav-link" href="#top">About</a>
@@ -41,18 +45,18 @@
             <!-- hero image -->
             <div class="container">
                 <img src="https://drive.google.com/thumbnail?id=18qKw996q8Tq1YxBDPBMK2bnQwwtp6e_D&sz=w1000" 
-                        class="rounded hero-image" alt="Aled Gomer">
-            <!-- hero image end -->
-            
+                     class="rounded hero-image" alt="Aled Gomer">
+                <!-- hero image end -->
+                
                 <!-- about section -->
                 <div>
-                    <h1 class="about-headder">About</h1>
+                    <h1 class="about-header" id="about-section">About</h1>
                     <p>Aled Gomer is a working-class actor and writer from Cardiff. He is a recent graduate from the acting programme at the Royal Welsh College of Music and Drama and previously trained at Drama Centre London. 
-                        Aled is also the recipient of the Garrick award and Carne Trust award for demonstrating considerable acting talent.
-
-                        Acting credits include: Edward ii, The 39 Steps, Macbeth, The Welkin and Mad Margot (Richard Burton Company).
+                        Aled is also the recipient of the Garrick award and Carne Trust award for demonstrating considerable acting talent.</p>
+                    
+                    <p>Acting credits include: Edward ii, The 39 Steps, Macbeth, The Welkin and Mad Margot (Richard Burton Company).</p>
                         
-                        Writing includes: Young Artists Festival (The Other Room); Learning To Float and The Mastiff (Pentabus Young Writers).</p>
+                    <p>Writing includes: Young Artists Festival (The Other Room); Learning To Float and The Mastiff (Pentabus Young Writers).</p>
                 </div>
             </div>
             <!-- about section end -->
@@ -88,7 +92,7 @@
                         <p>
                             Written by Aled Gomer
                             <br>
-                            Performed by ...
+                            Performed by <em>[Performer name needed]</em>
                         </p>
                     </div>
                     <!-- third video column -->
@@ -96,8 +100,9 @@
                         <iframe src="https://www.youtube.com/embed/EE_x3l-g7pA?si=XBHa8o5foi1kx7ra" 
                                 title="YouTube video player" frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <!-- third video column -->
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <!-- third video info -->
                         <h4>Get Ready With Me</h4>
                         <p>
                             Written by Rhys Warrington
@@ -113,55 +118,58 @@
             <div class="container">
                 <h1 id="facilitating">Facilitating</h1>
                 <div class="row">
-                    <p>Details about Aled's facilitation work and associated photos. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Minus ut minima ea fuga dicta adipisci, doloribus expedita. Impedit, veritatis vitae minus doloremque aut, ex reprehenderit minima quaerat autem numquam consectetur.</p>
+                    <div class="col-12">
+                        <p>Details about Aled's facilitation work and associated photos. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Minus ut minima ea fuga dicta adipisci, doloribus expedita. Impedit, veritatis vitae minus doloremque aut, ex reprehenderit minima quaerat autem numquam consectetur.</p>
+                    </div>
                 </div>
                 <div class="row" id="facilitating-images">
                     <!-- first image column -->
                     <div class="col-md-6 col-lg-4">
                         <div class="aspect-ratio-box">
                             <img src="https://lh3.googleusercontent.com/d/1UnGp2Cf8mdTShzK42y6vdpwdLC0dSfAF"
-                                 class="img-thumbnail" alt="Aled Gomer facilitating">
+                                 class="img-thumbnail" alt="Aled Gomer facilitating a workshop">
                         </div>
                     </div>
                     <!-- second image column -->
                     <div class="col-md-6 col-lg-4">
                         <div class="aspect-ratio-box">
                             <img src="https://lh3.googleusercontent.com/d/1QheEMfic7ZyHkhJvcekX7JBFsba-vHHe"
-                                 class="img-thumbnail" alt="Aled Gomer facilitating">
+                                 class="img-thumbnail" alt="Aled Gomer leading a theater workshop">
                         </div>
                     </div>
                     <!-- third image column -->
                     <div class="col-md-6 col-lg-4">
                         <div class="aspect-ratio-box">
                             <img src="https://lh3.googleusercontent.com/d/1l3WHvgakWfRxxuHUAfhgqwPt-yyBPbdZ"
-                                 class="img-thumbnail" alt="Aled Gomer facilitating">
+                                 class="img-thumbnail" alt="Aled Gomer directing a group activity">
                         </div>
                     </div>
                 </div>
             </div>
             <!-- facilitating section end -->
         </div>
+
         <!-- footer -->
         <footer>
             <!-- contact section -->
             <div class="container contact-section">
-                <h1 id="contact-header">Contact</h1>
+                <h1 id="contact">Contact</h1>
                 <br>
                 <ul id="social-links">
                     <li>
-                        <a href="https://app.spotlight.com/2619-1271-4860" target="_blank">
-                            <i class="fa-regular fa-circle"></i> Spotlight&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://app.spotlight.com/2619-1271-4860" target="_blank" rel="noopener">
+                            <i class="fa-regular fa-circle" aria-hidden="true"></i> Spotlight&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/ajgomer9/?hl=en" target="_blank">
-                            <i class="fa-brands fa-instagram"></i> Instagram&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://www.instagram.com/ajgomer9/?hl=en" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </li>
                     <li>
                         <a href="mailto:aledgomer&#64;gmail&#46;com?subject=Mail%20from%20Aled%20Gomer.com" target="_blank">
-                            <i class="fa-solid fa-at"></i> email&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa-solid fa-at" aria-hidden="true"></i> email&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </li>
                 </ul>
@@ -172,11 +180,14 @@
                 © 2024 Copyright: <a href="mailto:tigerfish967&#64;altmail&#46;kr?subject=Mail%20from%20Aled%20Gomer.com" target="_blank">
                     @ David Collins
                 </a>
-              </div>
+            </div>
         </footer>
         <!-- footer end -->
 
+        <!-- Bootstrap JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+                crossorigin="anonymous"></script>
     </body>
     <!-- body end -->
-
 </html>
