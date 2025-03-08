@@ -107,6 +107,38 @@ li {
   margin-right: 20px;
 }
 
+
+/* ==========
+FACILITATING
+========== */
+
+.aspect-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio (3/4 = 0.75 = 75%) */
+  /* For 16:9 use 56.25%, for 1:1 (square) use 100% */
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.aspect-ratio-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the image while maintaining center focus */
+}
+
+/* Keep Bootstrap's img-thumbnail styling but modify for our needs */
+.aspect-ratio-box .img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-sizing: border-box; /* Ensure padding doesn't affect total dimensions */
+}
+
 /* ==========
 FOOTER
 ========== */
