@@ -75,9 +75,15 @@ MAIN CONTENT
   margin-top: 10px !important;
 }
 
-#video-column {
+
+/* ==========
+FACILITATING
+========== */
+
+.video-column {
   margin: auto;
   padding: 10px 0 10px 0;
+  text-align: start;
 }
 
 iframe {
@@ -92,25 +98,6 @@ iframe {
 #facilitating-image {
   padding: 15px 5px 10px 5px;
 }
-
-/* ==========
-CONTACT
-========== */
-
-ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-}
-
-li {
-  margin-right: 20px;
-}
-
-
-/* ==========
-FACILITATING
-========== */
 
 .aspect-ratio-box {
   position: relative;
@@ -137,6 +124,125 @@ FACILITATING
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   box-sizing: border-box; /* Ensure padding doesn't affect total dimensions */
+}
+
+/* ==========
+IMAGE MODAL
+========== */
+
+.image-modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050; /* Higher than Bootstrap navbar */
+}
+
+/* Modal active state */
+.image-modal-container.active {
+  display: block;
+}
+
+/* Modal overlay */
+.image-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal content */
+.image-modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Modal image */
+.image-modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1060;
+}
+
+/* Navigation buttons */
+.image-modal-prev,
+.image-modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.image-modal-prev:hover,
+.image-modal-next:hover,
+.image-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal-prev {
+  left: 20px;
+}
+
+.image-modal-next {
+  right: 20px;
+}
+
+/* Add magnifying glass cursor to thumbnails */
+#facilitating-images .img-thumbnail {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+#facilitating-images .img-thumbnail:hover {
+  transform: scale(1.03);
+}
+
+/* ==========
+CONTACT
+========== */
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+li {
+  margin-right: 20px;
 }
 
 /* ==========
