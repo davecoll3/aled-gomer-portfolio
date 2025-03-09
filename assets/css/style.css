@@ -1,0 +1,360 @@
+/* ==========
+GOOGLE FONTS
+========== */
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=PT+Mono&display=swap');
+
+/* ==========
+GENERAL
+========== */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+  
+html {
+  height: 100%;
+  scroll-padding-top: 4rem;
+}
+  
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Cousine", serif;
+    background-color: aliceblue;
+}
+
+h1 {
+  margin: 40px 0 10px 0;
+  font-family: 'PT Mono', monospace;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+a:hover {
+  color: grey !important;
+}
+
+/* ==========
+NAVBAR
+========== */
+
+.navbar {
+  background-color: silver !important;
+}
+
+.navbar-text {
+  font-weight: 800;
+}
+
+/* ==========
+MAIN CONTENT
+========== */
+
+.container {
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hero-image {
+  width: 40vmin;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.about-headder {
+  margin-top: 10px !important;
+}
+
+
+/* ==========
+PROJECTS SECTION - VIDEO COLUMNS
+========== */
+
+/* Make all video-column elements the same height with flexbox */
+.projects-container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 10px 0 10px 0;
+  text-align: start;
+}
+
+/* Style for h4 elements in the projects section */
+.video-column h4 {
+  margin-bottom: 15px;
+  font-family: 'PT Mono', monospace;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+
+/* Make iframe containers consistent */
+.video-column iframe {
+  width: 95%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 15px;
+}
+
+/* Make the text container grow to fill available space */
+.video-column .text-start,
+.video-column div:not(.aspect-ratio-box) {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: Add a min-height to ensure even heights even with very different content amounts */
+.video-column {
+  min-height: 450px;
+}
+
+/* ==========
+FACILITATING
+========== */
+
+iframe {
+  width: 95%;
+  aspect-ratio: 16 / 9;
+}
+
+#facilitating-images {
+  margin-bottom: 20px;
+}
+
+#facilitating-image {
+  padding: 15px 5px 10px 5px;
+}
+
+.aspect-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio (3/4 = 0.75 = 75%) */
+  /* For 16:9 use 56.25%, for 1:1 (square) use 100% */
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.aspect-ratio-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the image while maintaining center focus */
+}
+
+/* Keep Bootstrap's img-thumbnail styling but modify for our needs */
+.aspect-ratio-box .img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-sizing: border-box; /* Ensure padding doesn't affect total dimensions */
+}
+
+/* ==========
+IMAGE MODAL
+========== */
+
+.image-modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050; /* Higher than Bootstrap navbar */
+}
+
+/* Modal active state */
+.image-modal-container.active {
+  display: block;
+}
+
+/* Modal overlay */
+.image-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal content */
+.image-modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Modal image */
+.image-modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1060;
+}
+
+/* Navigation buttons */
+.image-modal-prev,
+.image-modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.image-modal-prev:hover,
+.image-modal-next:hover,
+.image-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal-prev {
+  left: 20px;
+}
+
+.image-modal-next {
+  right: 20px;
+}
+
+/* Add magnifying glass cursor to thumbnails */
+#facilitating-images .img-thumbnail {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+#facilitating-images .img-thumbnail:hover {
+  transform: scale(1.03);
+}
+
+/* ==========
+CONTACT
+========== */
+
+/* Social Links Responsive Styling */
+#social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+  margin: 0 auto; /* Center the entire list */
+  width: 100%;
+  max-width: 400px; /* Limit the width to ensure proper centering */
+}
+
+#social-links li {
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Ensure text alignment is centered */
+}
+
+/* Add spacing between list items on desktop */
+#social-links li {
+  margin-right: 30px; /* Adjust this value for desired spacing between items */
+}
+
+#social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Center contents of links */
+  padding: 5px 0;
+  white-space: nowrap;
+}
+
+#social-links i {
+  margin-right: 8px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  #social-links {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Allow full width on mobile */
+  }
+  
+  #social-links li {
+    margin: 10px 0 !important; /* Override any margin from desktop */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the li elements */
+  }
+  
+  #social-links li:not(:last-child) {
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+  
+  #social-links a {
+    justify-content: center; /* Center text within links on mobile */
+    width: auto; /* Allow natural width */
+    min-width: 120px; /* Set a minimum width to help with centering */
+  }
+}
+
+/* ==========
+FOOTER
+========== */
+footer {
+  background-color: #e6f3ff;
+}
+
+.footer-container {
+  justify-content: left !important;
+  align-items: left !important;
+  text-align: left !important;
+}
+
+#contact-header {
+  margin-top: 20px !important;
+}
+
+.copyright-footer {
+  background-color: silver !important;
+}
