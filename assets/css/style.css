@@ -275,6 +275,22 @@ IMAGE MODAL
 /* ==========
 CONTACT
 ========== */
+/* Contact section with equal spacing */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 20px 0; /* Remove top padding, keep bottom padding */
+}
+
+.contact-section h1 {
+  margin: 15px 0 20px 0;
+}
+
+/* Override the general container margin for the contact section */
+footer .container {
+  margin-top: 0;
+}
 
 /* Social Links Responsive Styling */
 #social-links {
@@ -284,26 +300,25 @@ CONTACT
   align-items: center;
   padding: 0;
   list-style-type: none;
-  margin: 0 auto; /* Center the entire list */
+  margin: 10px auto; /* Equal 10px margin at top and bottom */
   width: 100%;
-  max-width: 400px; /* Limit the width to ensure proper centering */
+  max-width: 400px;
 }
 
 #social-links li {
-  margin: 0;
+  margin: 0 30px 0 0;
   padding: 0;
-  text-align: center; /* Ensure text alignment is centered */
+  text-align: center;
 }
 
-/* Add spacing between list items on desktop */
-#social-links li {
-  margin-right: 30px; /* Adjust this value for desired spacing between items */
+#social-links li:last-child {
+  margin-right: 0; /* Remove margin from last item */
 }
 
 #social-links a {
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* Center contents of links */
+  justify-content: center;
   padding: 5px 0;
   white-space: nowrap;
 }
@@ -317,24 +332,20 @@ CONTACT
   #social-links {
     flex-direction: column;
     align-items: center;
-    max-width: 100%; /* Allow full width on mobile */
+    max-width: 100%;
   }
   
   #social-links li {
-    margin: 10px 0 !important; /* Override any margin from desktop */
+    margin: 10px 0 !important;
     width: 100%;
     display: flex;
-    justify-content: center; /* Center the li elements */
-  }
-  
-  #social-links li:not(:last-child) {
-    margin-right: 0; /* Remove right margin on mobile */
+    justify-content: center;
   }
   
   #social-links a {
-    justify-content: center; /* Center text within links on mobile */
-    width: auto; /* Allow natural width */
-    min-width: 120px; /* Set a minimum width to help with centering */
+    justify-content: center;
+    width: auto;
+    min-width: 120px;
   }
 }
 
@@ -343,18 +354,10 @@ FOOTER
 ========== */
 footer {
   background-color: #e6f3ff;
-}
-
-.footer-container {
-  justify-content: left !important;
-  align-items: left !important;
-  text-align: left !important;
-}
-
-#contact-header {
-  margin-top: 20px !important;
+  padding-top: 0; /* Ensure no padding at the top of the footer */
 }
 
 .copyright-footer {
   background-color: silver !important;
+  margin-top: 10px; /* Match the spacing above social links */
 }
