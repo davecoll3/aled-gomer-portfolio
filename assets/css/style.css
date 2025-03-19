@@ -14,7 +14,7 @@ GENERAL
   
 html {
   height: 100%;
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 4rem; /* Ensures content isn't hidden behind fixed navbar when scrolling to anchors */
 }
   
 body {
@@ -34,6 +34,7 @@ p {
   margin: 0;
 }
 
+/* Global link styling */
 a {
   text-decoration: none;
   color: #000 !important;
@@ -65,13 +66,15 @@ MAIN CONTENT
   margin-top: 30px;
 }
 
+/* Hero image sizing and spacing */
 .hero-image {
   width: 40vmin;
   height: auto;
   margin-top: 1rem;
 }
 
-.about-headder {
+/* Fix typo in class name (was "headder") */
+.about-header {
   margin-top: 10px !important;
 }
 
@@ -86,13 +89,14 @@ PROJECTS SECTION - VIDEO COLUMNS
   flex-wrap: wrap;
 }
 
+/* Video column layout with flexbox to ensure equal heights */
 .video-column {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
   padding: 10px 0 10px 0;
   text-align: start;
-  min-height: 450px;
+  min-height: 450px; /* Ensures minimal height for consistency */
 }
 
 /* Style for h4 elements in the projects section */
@@ -122,11 +126,12 @@ PROJECTS SECTION - VIDEO COLUMNS
   flex-direction: column;
 }
 
+/* Project text content padding */
 .projects-text {
-  padding: 0 30px 0 35px;
+  padding: 0 30px 0 35px; /* Consider standardizing to equal left/right padding */
 }
 
-/* Media query for mobile devices */
+/* Media query for mobile devices - adjust spacing for smaller screens */
 @media (max-width: 767px) {
   .video-column {
     margin-bottom: 5px;
@@ -137,28 +142,28 @@ PROJECTS SECTION - VIDEO COLUMNS
 FACILITATING
 ========== */
 
-iframe {
-  width: 95%;
-  aspect-ratio: 16 / 9;
-}
-
+/* Container for facilitating images */
 #facilitating-images {
   margin-bottom: 20px;
 }
 
+/* Individual facilitating image padding */
 #facilitating-image {
   padding: 15px 5px 10px 5px;
 }
 
+/* Container with fixed aspect ratio for images */
 .aspect-ratio-box {
   position: relative;
   width: 100%;
   padding-top: 75%; /* 4:3 aspect ratio (3/4 = 0.75 = 75%) */
   /* For 16:9 use 56.25%, for 1:1 (square) use 100% */
+  border-radius: 0.25rem; /* Maintain rounded corners */
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
+/* Position images within the aspect ratio container */
 .aspect-ratio-box img {
   position: absolute;
   top: 0;
@@ -170,17 +175,16 @@ iframe {
 
 /* Keep Bootstrap's img-thumbnail styling but modify for our needs */
 .aspect-ratio-box .img-thumbnail {
-  padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
-  box-sizing: border-box; /* Ensure padding doesn't affect total dimensions */
+  padding: 0;
+  border: none;
+  border-radius: 0.25rem; /* Maintain rounded corners */
 }
 
 /* ==========
 IMAGE MODAL
 ========== */
 
+/* Modal container - hidden by default */
 .image-modal-container {
   display: none;
   position: fixed;
@@ -196,7 +200,7 @@ IMAGE MODAL
   display: block;
 }
 
-/* Modal overlay */
+/* Modal overlay - darkens the background */
 .image-modal-overlay {
   position: absolute;
   top: 0;
@@ -206,7 +210,7 @@ IMAGE MODAL
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal content */
+/* Modal content - centers the image */
 .image-modal-content {
   position: relative;
   display: flex;
@@ -217,7 +221,7 @@ IMAGE MODAL
   box-sizing: border-box;
 }
 
-/* Modal image */
+/* Modal image - maintains aspect ratio and limits size */
 .image-modal-img {
   max-width: 90%;
   max-height: 90%;
@@ -225,7 +229,7 @@ IMAGE MODAL
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Close button */
+/* Close button - positioned in top right corner */
 .image-modal-close {
   position: absolute;
   top: 20px;
@@ -238,7 +242,7 @@ IMAGE MODAL
   z-index: 1060;
 }
 
-/* Navigation buttons */
+/* Navigation buttons - left and right arrows */
 .image-modal-prev,
 .image-modal-next {
   position: absolute;
@@ -258,12 +262,14 @@ IMAGE MODAL
   transition: background 0.3s ease;
 }
 
+/* Hover effects for modal controls */
 .image-modal-prev:hover,
 .image-modal-next:hover,
 .image-modal-close:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
+/* Position for prev/next buttons */
 .image-modal-prev {
   left: 20px;
 }
@@ -278,8 +284,10 @@ IMAGE MODAL
   transition: transform 0.2s ease;
 }
 
+/* Subtle hover effect for thumbnails */
 #facilitating-images .img-thumbnail:hover {
   transform: scale(1.03);
+  border-radius: 0.25rem !important;
 }
 
 /* ==========
@@ -293,6 +301,7 @@ CONTACT
   padding: 0 0 20px 0; /* Remove top padding, keep bottom padding */
 }
 
+/* Adjust heading spacing in contact section */
 .contact-section h1 {
   margin: 15px 0 20px 0;
 }
@@ -315,16 +324,19 @@ footer .container {
   max-width: 400px;
 }
 
+/* Space out social links evenly */
 #social-links li {
   margin: 0 30px 0 0;
   padding: 0;
   text-align: center;
 }
 
+/* Remove margin from last social link item */
 #social-links li:last-child {
-  margin-right: 0; /* Remove margin from last item */
+  margin-right: 0;
 }
 
+/* Style social link items */
 #social-links a {
   display: inline-flex;
   align-items: center;
@@ -333,11 +345,12 @@ footer .container {
   white-space: nowrap;
 }
 
+/* Space between icon and text */
 #social-links i {
   margin-right: 8px;
 }
 
-/* Media query for mobile devices */
+/* Media query for mobile devices - stack social links vertically */
 @media (max-width: 767px) {
   #social-links {
     flex-direction: column;
@@ -367,6 +380,7 @@ footer {
   padding-top: 0; /* Ensure no padding at the top of the footer */
 }
 
+/* Style for copyright section */
 .copyright-footer {
   background-color: silver !important;
   margin-top: 10px; /* Match the spacing above social links */
