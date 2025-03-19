@@ -126,6 +126,13 @@ PROJECTS SECTION - VIDEO COLUMNS
   padding: 0 30px 0 35px;
 }
 
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .video-column {
+    margin-bottom: 5px;
+  }
+}
+
 /* ==========
 FACILITATING
 ========== */
