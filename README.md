@@ -3,7 +3,8 @@
 A simple, responsive portfolio site for Aled Gomer (actor, writer, theatre maker, and facilitator). The site presents an about section, project showcase videos, facilitating work, and contact links.
 
 ## Live site
-- Domain configured via `CNAME` for GitHub Pages.
+- URL: `https://aledgomer.com/`
+- Hosting: Namecheap
 
 ## Features
 - Responsive single‑page layout with anchored navigation.
