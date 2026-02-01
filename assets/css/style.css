@@ -99,8 +99,8 @@ PROJECTS SECTION - VIDEO COLUMNS
   min-height: 450px; /* Ensures minimal height for consistency */
 }
 
-/* Style for h4 elements in the projects section */
-.video-column h4 {
+/* Style for h2 elements in the projects section */
+.video-column h2 {
   margin-bottom: 15px;
   font-family: 'PT Mono', monospace;
   font-weight: 700;
@@ -384,4 +384,8 @@ footer {
 .copyright-footer {
   background-color: silver !important;
   margin-top: 10px; /* Match the spacing above social links */
+}
+
+footer a {
+  font-weight: 600;
 }
