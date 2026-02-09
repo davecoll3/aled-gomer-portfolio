@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     font-family: "Cousine", serif;
     background-color: aliceblue;
+    padding-top: 2rem; /* Offset fixed navbar so hero image isn't tucked behind it */
 }
 
 h1 {
